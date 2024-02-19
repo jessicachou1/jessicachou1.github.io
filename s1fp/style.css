@@ -361,7 +361,7 @@
 #system{
   position: absolute;
   top: 500px;
-  left: 20px;
+  left: 200px;
   background-color: black;
   transform: rotate(-10deg) skew(-5deg);
   height: 60px;
