@@ -156,6 +156,8 @@ form {
   font-weight: 300;
   font-family: "Clash Display", sans-serif;
   margin-bottom:-4vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 #questionInput::placeholder {

@@ -65,7 +65,7 @@ function getQuestion() {
 
   var quesBoxElem = document.getElementById("questions");
   var inputHTML =
-    '<form><input type="text" id="questionInput" placeholder="Fill blank..."></form>';
+    '<form><input type="text" id="questionInput" placeholder="Fill in the blank..."></form>';
     ques = ques.replace("__________", inputHTML);
   quesBoxElem.innerHTML = ques;
 }
