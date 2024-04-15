@@ -80,7 +80,6 @@ body {
 
 
 #door-closed { 
-
   position: relative;
   top: 0;
   left: 0;
@@ -90,21 +89,17 @@ body {
 }
 
 #door-open {
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-#door:hover > #door-closed,
-#door:focus > #door-closed {
-  opacity: 0;
-}
-
 #door:hover > #door-open,
 #door:focus > #door-open {
-  opacity: 1;
+    opacity: 1;
 }
+
 
 
 #title {
@@ -112,8 +107,9 @@ body {
   font-weight: bold;
   font-size: 5vw;
   text-align: center;
-  animation: grow-text 1s infinite;
+  /* animation: grow-text 1s infinite; */
   margin-left: 34vw;
+  margin-right: 34vw;
   margin-top: 5vw;
 }
 
@@ -297,7 +293,7 @@ img {
 }
 .resize2 {
   position: absolute;
-  bottom: 80%;
+  bottom: 70%;
   right: 10%;
   width: 5%;
   height: auto;
@@ -315,9 +311,9 @@ img {
 
 .resize {
   position: absolute;
-  bottom: 35%;
+  bottom: 30%;
   right: 40%;
-  width: 50%;
+  width: 45%;
   height: auto;
 }
 
@@ -590,4 +586,13 @@ to{
   justify-content: center;
   align-items: center;
   padding-top: 3vw;
+}
+
+.imhome-link {
+  text-decoration: none; /* Remove underline */
+  color: black; /* Default color */
+}
+
+.imhome-link:hover {
+  color: rgb(74, 74, 74); /* Color on hover */
 }
