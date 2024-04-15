@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="home.css">
+</head>
+<html lang="en"> 
+<style> 
+    @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+</style> 
+
+<body>
+    <section id="intro-section">
+        <div id="introduction">
+            <div id="door">
+                <!-- Closed door image -->
+                <img id="door-closed" src="door closed.png" alt="door is closed." style="cursor: pointer;">
+                <!-- Open door image -->
+                <img id="door-open" src="door open.png" alt="door is open. Someone's home!" style="cursor: pointer; display: none;">
+                <!-- Audio element -->
+                <audio id="door-audio" src="welcome-home.mp3"></audio>
+                <audio id="scroll-audio" src="family-holiday.mp3"></audio>
+            </div>
+            
+            <script>
+                // Preload images
+                const images = ['door-closed.png', 'door-open.png', 'door-sound.mp3', 'family-holiday.mp3'];
+                preloadImages(images);
+                
+                function preloadImages(images) {
+                    for (let i = 0; i < images.length; i++) {
+                        const img = new Image();
+                        img.src = images[i];
+                    }
+                }
+                
+                // Get references to the elements
+                const doorClosed = document.getElementById('door-closed');
+                const doorOpen = document.getElementById('door-open');
+                const doorAudio = document.getElementById('door-audio');
+                const scrollAudio = document.getElementById('scroll-audio');
+
+                // Add click event listener to the closed door image
+                doorClosed.addEventListener('click', function() {
+                    // Play the audio
+                    doorAudio.play();
+                    
+                    // Hide closed door, show open door
+                    doorClosed.style.display = 'none';
+                    doorOpen.style.display = 'block';
+                });
+                
+                // Add click event listener to the open door image
+                doorOpen.addEventListener('click', function() {
+                    // Hide open door, show closed door
+                    doorOpen.style.display = 'none';
+                    doorClosed.style.display = 'block';
+                });
+
+                // Add scroll event listener to the window
+                window.addEventListener('scroll', function() {
+                    // Play the scroll audio when the user scrolls
+                    scrollAudio.play();
+                });
+            </script>
+
+            <div id="title" class="font">
+                I'm Home!
+            </div>
+
+            <div id="scroll-down">
+                <div id="scroll" class="font">
+                    scroll down
+                </div>
+                <img id="arrow" src="arrow.png" alt="a black arrow pointing down">
+            </div>
+
+            <a href="#middle-section">
+                <div id="scroll-down">
+                    <div id="scroll" class="font">
+                        scroll down
+                    </div>
+                    <img id="arrow" src="arrow.png" alt="a black arrow pointing down">
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="middle-section">
+        <div id="wrapper2">
+            <div id="setthetonetext" class="font medium">
+                Set the tone for home sweet home - because every entrance deserves it own sountrack!
+            </div>
+
+            <img src="musical note.png" class="resize3 note1"/>
+            <img src="musical note2.png" class="resize1 note2"/>
+            <img src="musical note3.png" class="resize2 note3"/>
+            <img src="three black musical notes.png" class="resize note4"/>
+        </div>
+
+        <div id="wrapper3">
+            <div id="hometext1" class="font opaque big black">Home</div>
+            <div id="sweettext" class="font opaque big black">Sweet</div>
+            <div id="hometext2" class="font opaque big black">Home</div>
+
+            <div id="house" class="imgcontainer">
+                <img src="white cookie house with yellow windows.png" class="resizedimg">
+            </div>
+
+            <div id="contentwrapper">
+                <div id="step1" class="font stepwrapper">
+                    <div id="font stepnumber small">01</div>
+                    <span class="black">GOING HOME</span><br><br> When you are almost home...
+                </div>
+
+                <div id="step2" class="font stepwrapper">
+                    <div class="font steppnumber small">02</div>
+                    <span class="black">PLAYING MUSIC</span><br><br> Your theme song plays...
+                </div>
+
+                <div id="step3" class="font stepwrapper">
+                    <div class="font stepnumber small">03</div>
+                    <span class="black">ANNOUNCING YOUR PRESCENCE</span><br><br> On your roommates' phones!
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="annoy-section">
+        <div id="annoy">
+            <div id="annoy-text" class="font">
+                Annoy your roommates, partners, and parents!
+            </div>
+
+            <div id="angrywoman">
+                <img id="angrywoman" src="woman swearing.png" alt="woman is angry, she points her finger.">
+                <img id="angryicon" src="icon angry.png" alt="angry icon with the woman">
+            </div>
+
+            <div id="shutup" class="font">
+                <div class="shutup-text">shut up</div>
+            </div>
+
+            <div id="black-music">
+                <img id="black-musicnote" src="black-musicnote.png" alt="black music note dancing in background.">
+            </div>
+
+            <div id="yellow-music">
+                <img id="yellow-musicnote" src="yellow-musicnote.png" alt="yellow music note dancing in background.">
+            </div>
+            <div id="big-music">
+                <img id="big-musicnote" src="big-musicnote.png" alt="big yellow music note dancing in background.">
+            </div>
+            <div id="man">
+                <img id="man-waving" src="happy man.png" alt="man is waving, he is happy to be home. ">
+            </div>
+            <div id="happywoman">
+                <img id="woman-smiling" src="happy woman.png" alt="woman is smiling, she is happy to annoy her roommates.">
+            </div>
+
+            <div id="Imhome" class="font">
+                <div class="Imhome-text">I'm home ~</div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="footer">
+        <div id="text" class="font medium">
+            We take no responsibility for any broken roommate relationships. Use with caution.<br /><br />
+        </div>
+
+        <div id="text" class="font small">
+            Created by Jessica Chou, Cindy Chang @2024
+        </div>
+
+        <div class="font big black">imhome.app</div>
+    </section>
+
+    <div id="download">
+        <a style="text-decoration:none" href="https://ifttt.com/applets/xkMpHhYW-i-m-home?utm_medium=direct&utm_source=connection&utm_campaign=share_button">
+            <div class="download-button font medium" aria-label="Download button">
+                download
+            </div>
+        </a>
+    </div>
+
+</body>

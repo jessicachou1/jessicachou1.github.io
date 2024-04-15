@@ -1,0 +1,593 @@
+body {
+  background-color: #FFF8E6;
+  padding: 0;
+  height: 100%;
+  margin: 0;
+}
+
+.font {
+  font-family: "Unbounded", sans-serif;
+}
+.small {
+  font-size: calc(10px + 0.5vw);
+}
+
+.medium {
+  font-size: calc(10px + 1vw);
+}
+
+.big {
+  font-size: calc(10px + 10vw);
+}
+
+#intro-section {
+  background-color: #FFF8E6;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#download {
+  width: 10vw;
+  height: 2vw;
+  position: fixed;
+  top: 1vw;
+}
+
+.download-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  color: black;
+  font-weight: bold;
+  font-size: 1.6vw;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-top: 2vw;
+  margin-left: 86vw;
+  
+}
+  
+.download-button:hover { 
+  background-color: lightyellow;
+  
+}
+  
+
+#door {
+  position: relative;
+  cursor: grab;
+  width: 16vw; 
+  height: 20vw;  
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 42vw;
+}
+
+#door:active {
+  position: relative;
+  cursor: grabbing;
+}
+
+#door > img {
+  width: 100%;
+  height: auto;
+}
+
+
+#door-closed { 
+
+  position: relative;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: 1000ms;
+
+}
+
+#door-open {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#door:hover > #door-closed,
+#door:focus > #door-closed {
+  opacity: 0;
+}
+
+#door:hover > #door-open,
+#door:focus > #door-open {
+  opacity: 1;
+}
+
+
+#title {
+  color: black;
+  font-weight: bold;
+  font-size: 5vw;
+  text-align: center;
+  animation: grow-text 1s infinite;
+  margin-left: 34vw;
+  margin-top: 5vw;
+}
+
+#scroll {
+  position: absolute;
+  color: black;
+  font-size: 1.6vw;
+  text-align: center;
+  margin-left: 44vw;
+  margin-top: 2vw;
+
+}
+
+#arrow {
+  position: absolute;
+  width: 2vw;
+  margin-top: 2vw;
+  margin-left: 55vw;
+
+}
+
+
+
+/*middle*/
+.opaque {
+  opacity: 50%;
+}
+
+.black {
+  font-weight: 900;  
+}
+
+#middle-section {
+  width: 100vw;
+}
+
+#wrapper2 {
+  background-color: #ffce55;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#setthetonetext {
+  width: 60vw;
+  text-align: center;
+  position: absolute;
+  top: 70%;
+}
+
+#text {
+  width: 60vw;
+  text-align: center;
+}
+
+#wrapper3 {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+#hometext1 {
+  position: absolute;
+  z-index: 0;
+  color: #ffce55;
+  font-size: calc(10px + 15vw);
+  left: 0;
+  top: 0%;
+}
+#hometext2 {
+  position: absolute;
+  z-index: 0;
+  color: #ffce55;
+  font-size: calc(10px + 15vw);
+  left: 0;
+  top: 60%;
+}
+#sweettext {
+  position: absolute;
+  z-index: 0;
+  color: #ffce55;
+  font-size: calc(10px + 15vw);
+  right: 0;
+  top: 30%;
+}
+
+#contentwrapper {
+  width: 100vw;
+  position: relative;
+  height: 100vh;
+}
+
+#step1 {
+  position: absolute;
+  left: 75%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
+
+#step2 {
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#step3 {
+  position: absolute;
+  left: 75%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.stepwrapper {
+  margin-bottom: 1vw;
+  border: solid black calc(1px + 0.2vw);
+  padding: 2vw;
+  width: calc(50px + 20vw);
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+}
+
+.stepnumber {
+  width: calc(5px + 5vw);
+  height: calc(5px + 5vw);
+  background-color: white;
+  border: calc(1px + 0.2vw) solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -4vw;
+  left: -12%;
+}
+
+.imgcontainer {
+  width: 100%;
+}
+
+.resizedimg {
+  width: 35vw;
+  height: auto;
+  display: block;
+  margin-left: 35vw;;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#house {
+  max-width: 100%;
+  height: auto;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.resize1 {
+  position: absolute;
+  bottom: 70%;
+  right: 90%;
+  width: 8%;
+  height: auto;
+  filter: grayscale(100%) brightness(20%);
+}
+.resize2 {
+  position: absolute;
+  bottom: 80%;
+  right: 10%;
+  width: 5%;
+  height: auto;
+}
+
+.resize3 {
+  position: absolute;
+  bottom: 10%;
+  right: 0%;
+  width: 50%;
+  height: auto;
+  width: 8%;
+  filter: grayscale(100%) brightness(20%);
+}
+
+.resize {
+  position: absolute;
+  bottom: 35%;
+  right: 40%;
+  width: 50%;
+  height: auto;
+}
+
+@keyframes dance-note1 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes dance-note2 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes dance-note3 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes dance-note4 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes move-right {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+}
+
+@keyframes move-left {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(2px);
+  }
+  50% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+}
+
+@keyframes grow {
+from{
+  width: 0;
+
+}
+to{
+  width: 8%;
+}
+
+}
+
+@keyframes grow-text {
+  20% {font-size: 5.2vw;}
+}
+
+.note1 {
+  animation: dance-note1 1s infinite;
+}
+.note2 {
+  animation: dance-note2 1s infinite;
+}
+.note3 {
+  animation: dance-note3 1s infinite;
+}
+.note4 {
+  animation: dance-note4 1s infinite;
+}
+
+/* annoy section*/
+#annoy-section {
+  position: relative;
+  width: 100vw;
+}
+#annoy {
+  display: flex;
+}
+
+#annoy-text {
+  color: black;
+  font-weight: bold;
+  font-size: 4vw;
+  text-align: center;
+  align-self: center;
+  width: 40vw;
+  margin-left: 30vw;
+  
+}
+
+#angrywoman {
+  position: absolute;
+  margin-top: 2vw;
+  width: 18vw;
+  animation: move-right 1s infinite;
+}
+
+#angryicon {
+  position: absolute;
+  margin-left: 14vw;
+  width: 4vw;
+
+}
+
+#shutup {
+  position: absolute;
+  display: flex;
+  width: 10vw;
+  height: 4vw;
+  border: 2px solid black;
+  border-radius: 8px;
+  margin-top: 2vw;
+  margin-left: 21vw;
+  background-color: white;
+  animation: move-right 1s infinite;
+}
+
+.shutup-text {
+  position: relative;
+  color: black;
+  font-weight: bold;
+  font-size: 1.4vw;
+  align-self: center;
+  text-align: center;
+  margin-left: 1.7vw;
+  
+}
+
+#yellow-music {
+  position: absolute;
+}
+#yellow-musicnote {
+  position: relative;
+  margin-top: 40vw;
+  width: 10vw;
+  animation: dance-note1 1s infinite;
+}
+
+#big-music {
+  position: absolute; 
+  animation: dance-note3 1s infinite;
+  animation: grow 1s infinite;
+}
+#big-musicnote {
+  position: relative;
+  margin-top: 24vw;
+  margin-left: 85vw;
+  width: 16vw;
+}
+
+#black-music {
+  position: absolute;
+}
+#black-musicnote {
+  position: relative;
+  margin-left: 80vw;
+  width: 13vw;
+  animation: dance-note2 1s infinite;
+}
+
+#man {
+  position: absolute;
+}
+
+#man-waving {
+  position: relative;
+  width: 18vw;
+  margin-top: 58vw;
+  margin-left: 5vw;
+  animation: move-right 1s infinite;
+
+}
+
+#happy-woman {
+  position: absolute;
+}
+
+#woman-smiling {
+  position: relative;
+  width: 28vw;
+  margin-top: 52vw;
+  margin-left: 5vw;
+  animation: move-left 1s infinite;
+}
+
+#Imhome {
+  position: absolute;
+  display: flex;
+  width: 16vw;
+  height: 4vw;
+  border: 2px solid black;
+  border-radius: 8px;
+  margin-top: 80vw;
+  margin-left: 52vw;
+  background-color: white;
+  animation: move-left 1s infinite;
+}
+
+.Imhome-text {
+  position: relative;
+  color: black;
+  font-weight: bold;
+  font-size: 2vw;
+  align-self: center;
+  text-align: center;
+  margin-left: 1.7vw;
+}
+
+
+/* footer section*/
+#footer {
+  position: absolute; 
+  background-color: #ffce55;
+  width: 100%;
+  height: 50vh;
+  /*bottom: 0;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3vw;
+}
