@@ -111,4 +111,11 @@ function mousePressed() {
 
   function clearCanvas() {
     location.reload();
+    backgroundcolor = color(255, 255, 255);
+    circlecolor = color(255, 255, 255);
   }
+
+  document.addEventListener('click', function() {
+    document.getElementById('title').style.display = 'none'; // Hide the title when clicked anywhere on the page
+  });
+  

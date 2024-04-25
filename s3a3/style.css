@@ -25,6 +25,16 @@ canvas {
   font-family: "Fira Code", monospace;
 }
 
+#title {
+  font-size: 10vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 0;
+}
+
 .nav-button {
   cursor: pointer;
   flex: 1;
