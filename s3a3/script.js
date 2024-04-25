@@ -108,13 +108,12 @@ function mousePressed() {
       attempts++;
     } while (abs(brightness(circlecolor) - bgBrightness) > 150 && attempts < 100);
   }
-
   function clearCanvas() {
-    location.reload();
+    document.getElementById('title').style.display = 'none';
     backgroundcolor = color(255, 255, 255);
     circlecolor = color(255, 255, 255);
   }
-
+  
   document.addEventListener('click', function() {
     document.getElementById('title').style.display = 'none'; // Hide the title when clicked anywhere on the page
   });
