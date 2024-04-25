@@ -1,9 +1,64 @@
-html, body {
-    margin: 0;
-    padding: 0;
-  }
-  canvas {
-    display: block;
-  }
-  
-  
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+canvas {
+  display: block;
+}
+
+/* fonts here */
+.boska {
+  font-family: "Boska", serif;
+}
+
+.cabinet {
+  font-family: "Cabinet Grotesk", sans-serif;
+}
+
+.jetbrains {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.fira {
+  font-family: "Fira Code", monospace;
+}
+
+.nav-button {
+  cursor: pointer;
+  flex: 1;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 1.5vh 3vw; /* Adjusted padding for better visual balance */
+  text-align: center;
+  font-size: 2vh;
+  z-index: 10;
+  border: none;
+  border-radius: 10px; /* Rounded corners for a smoother appearance */
+  box-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.nav-button:hover,
+.nav-button:active {
+  background-color: lightyellow;
+
+}
+
+.bottom-navigation {
+  position: fixed;
+  bottom: 3vh;
+  gap: 2vw;;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  width: 60vw; /* Adjusted width for better spacing */
+  max-width: 40rem; /* Maximum width to prevent excessive stretching */
+}
+
+#clearbutton{
+  top: 2vw;
+  right: 2vw;
+  position: absolute;
+}
