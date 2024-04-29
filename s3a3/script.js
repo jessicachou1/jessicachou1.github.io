@@ -110,6 +110,8 @@ function mousePressed() {
   }
   function clearCanvas() {
     clear();
+    backgroundcolor = color(255, 255, 255);
+    circlecolor = color(255, 255, 255);
   }
   
   document.addEventListener('click', function() {
