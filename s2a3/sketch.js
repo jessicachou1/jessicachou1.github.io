@@ -8,6 +8,9 @@ let secMillis = 0;
 const mindelay = 100;
 const secdelay = 10;
 
+let colors = ['#E91E63', '#2196F3', '#4CAF50', '#FF9800', '#9C27B0'];
+let currentColorIndex = 0;
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
@@ -19,7 +22,7 @@ function setup() {
 }
 
 function draw() {
-  background('#E91E63');
+    background(colors[currentColorIndex]);;
 
   translate(width / 2, height / 2);
 
@@ -170,3 +173,8 @@ const timeText = nf(hours, 2) + ":" + nf(minutes, 2) + ":" + nf(seconds, 2);
   fill(255, 255, 255, 80);
   text(timeText, 0, 35);
 }
+
+function mousePressed() {
+    currentColorIndex = (currentColorIndex + 1) % colors.length;
+  }
+  
