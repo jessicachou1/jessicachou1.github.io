@@ -1,0 +1,39 @@
+html {
+    color: red;
+    background-color: white;
+    text-align: center;
+    /* display: flex; */
+    justify-content: center;
+    /* align-items: center; */
+    padding: 5vw;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  h1 {
+    text-align: center;
+    color: red;
+    font-size: 10vw;
+    transition: color 1s ease, font-size 1s ease, line-height 1s ease;
+  }
+  p {
+    text-align: center;
+    color: #333;
+    font-size: 6vw;
+    transition: color 1s ease, font-size 1s ease, line-height 1s ease;
+  }
+  h1:hover {
+    text-align: center;
+    color: red;
+    font-size: 10vw;
+    line-height: 5vw;
+    font-size: 5vw;
+  }
+  p:hover{
+    text-align: center;
+    color: #333;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+  }
