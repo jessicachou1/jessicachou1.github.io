@@ -1,0 +1,475 @@
+/* Base styles */
+html, body {
+    height: 100%;
+    margin-top: 2.5vw;
+    overflow: hidden;
+    background-color: #b0ceff;
+  }
+  
+  #wrapper {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-color: #ba0082;
+    overflow: hidden;
+    margin: auto; /* Center the element horizontally */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  
+  
+  #background{
+    position: absolute;
+    width: 1500px;
+    height: 1000px;
+    background: #b0ceff;
+    top: 300px;
+    left: -100px;
+    rotate: 10deg;
+  }
+  
+  #backbox{
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    background: #ffe3f3;
+    top: 40px; 
+    left: 250px;
+    rotate: -70deg;
+    border-radius: 5%;
+  }
+  
+  #backboxbottom{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-top: 50px solid transparent;
+    border-left: 200px solid pink;
+    border-bottom: 50px solid transparent;
+    top: 58px; 
+    right: 115px;
+    rotate: 76deg;
+    border-radius: 2%;
+  }
+  
+  #triangle {
+    position: relative;
+    border-top: 50px solid transparent;
+    border-left: 200px solid blue;
+    border-bottom: 50px solid transparent;
+    rotate: 80deg;
+  }
+  
+  #triangle2 {
+    position: relative;
+    border-top: 50px solid transparent;
+    border-left: 200px solid white;
+    border-bottom: 50px solid transparent;
+    rotate: 110deg;
+  }
+  
+  #gradientbox {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    background: #e3125b;
+    background-image: linear-gradient(100deg, #e3125b 20%,  #fa93b7 70%, #ffe8f0 100%);
+    bottom: 30px; 
+    left: 150px;
+    rotate: -10deg;
+    border-radius: 2%;
+    box-shadow: inset 0px 0px 5px 5px #ff94b9;
+  }
+  
+  #bottomgradient {
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    background-image: linear-gradient(100deg, #e3125b 40%,  #fa93b7 90%, #ffe8f0 100%);
+    bottom: -95px; 
+    left: 10px;
+    border-radius: 2%;
+  }
+  
+  #book {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #ffe3f3;
+    bottom: -50px; 
+    right: -10px;
+    rotate: 10deg;
+    border-radius: 2%;
+  }
+  
+  #gamebody {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #820933;
+    top: 0px; 
+    left: 300px;
+    transform: skew(-10deg);
+    rotate: 40deg;
+    border-radius: 10%;
+  }
+  
+  #gamecover {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #820933;
+    top: -110px; 
+    left: 385px;
+    transform: skew(10deg);
+    rotate: 40deg;
+    border-radius: 10%;
+  }
+  
+  #cross {
+        background: white;
+        height: 40px;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 10px;
+      }
+      #cross:after {
+        background: white;
+        content: "";
+        height: 10px;
+        left: -15px;
+        position: absolute;
+        top: 15px;
+        width: 40px;
+      }
+  
+  #button {
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    outline: 2px solid white;
+    border-radius: 50%;
+  }
+  
+  #button2 {
+    position: absolute;
+    top: 120px;
+    left: 85px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+  }
+  
+  #button3 {
+    position: absolute;
+    top: 120px;
+    left: 55px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+  }
+  
+  #button4 {
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+  }
+  
+  #button5 {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+  }
+  
+  #screen {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: white;
+    top: -95px; 
+    left: 400px;
+    transform: skew(10deg);
+    rotate: 40deg;
+    border-radius: 5%;
+  }
+  
+  #breadboard {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    background: #b0ceff;
+    top: 100px; 
+    left: 80px;
+    transform: skew(-10deg);
+    rotate: 40deg;
+    border-radius: 5%;
+  }
+  
+  #button1 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+  }
+  
+  #coverdetails {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #0f17ff;
+    top: 90px; 
+    left: 40px;
+    border-radius: 50%;
+  }
+  
+  #crosscover {
+    background: white;
+    height: 100px;
+    position: relative;
+    top: 40px;
+    left: 130px;
+    width: 20px;
+    transform: skew(-40deg);
+    rotate: 30deg;
+  }
+      #crosscover:after {
+        background: white;
+        content: "";
+        height: 20px;
+        left: -40px;
+        position: absolute;
+        top: 40px;
+        width: 100px;
+      }
+  
+  #author {
+    position: relative;
+    font-family: monospace;
+    text-align: left;
+    width: 1000px;
+    font-size: 36px;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    color: #0f17ff;
+  }
+  
+  #whitebox{
+    position: absolute;
+    width: 50px;
+    height: 300px;
+    background: white;
+    top: 150px; 
+    left: -10px;
+    transform: skew(-10deg);
+    rotate: 10deg;
+    border-radius: 3%;
+  }
+  
+  #whiteboxshadow{
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    background: gray;
+    top: 385px; 
+    left: -95px;
+    transform: skew(60deg);
+    rotate: 80deg;
+    border-radius: 5%;
+  }
+  
+  #bottlewrapper {
+    position: absolute;
+    left: 50px;
+    top: -100px;
+    opacity: .7;
+    rotate: -10deg;
+  }
+  
+  #bottlecap {
+    width: 66px;
+    height: 50px;
+    position: absolute;
+    top: -30px;
+    left: 17px;
+    background-color: white;
+    border-bottom-left-radius: 50% 35%;
+    border-bottom-right-radius: 50% 35%;
+    border-top-left-radius: 50% 45%;
+    border-top-right-radius: 50% 45%;
+    transform: perspective(200px) rotateX(20deg);
+  }
+  
+  #bottlecapbottom {
+    width: 66px;
+    height: 50px;
+    position: absolute;
+    top: -30px;
+    left: 17px;
+    background-color: #4f5d73;
+    border-bottom-left-radius: 50% 35%;
+    border-bottom-right-radius: 50% 35%;
+    border-top-left-radius: 50% 45%;
+    border-top-right-radius: 50% 45%;
+    transform: perspective(200px) rotateX(20deg);
+    mask: radial-gradient(55% 55% at 50% 0%, transparent 100%, black 100.1%);
+  }
+  
+  #bottleneck {
+    width: 66px;
+    height: 50px;
+    position: absolute;
+    top: 2px;
+    left: 17px;
+    background-color: gray;
+    border-radius: 50%;
+  }
+  
+  #bottle {
+    display: block;
+    width: 100px;
+    height: 180px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: gray;
+    border-radius: 20% 20% 20% 20% / 70% 70% 40% 40%;
+    transform: perspective(200px) rotateX(20deg);
+  }
+  
+  #bottlebottom {
+    width: 90px;
+    height: 50px;
+    position: absolute;
+    top: 155px;
+    left: 5px;
+    background-color: gray;
+    border-radius: 50%;
+  }
+  
+  #bottlelabel {
+    opacity: .9;
+    mix-blend-mode: multiply;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    border-bottom-left-radius: 50% 25%;
+    border-bottom-right-radius: 50% 25%;
+    mask: radial-gradient(50% 25% at 50% 0%, transparent 100%, black 100.1%);
+    transform: perspective(200px) rotateX(30deg);
+  }
+  
+  #labelcolor {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, white, blue, grey);
+  }
+  
+  /*animations and fun stuff begin here*/
+  
+  .bigshadow {
+    filter: drop-shadow(50px 10px 30px rgba(12, 21, 10, .5));
+  }
+  
+  .smallshadow {
+    filter: drop-shadow(5px 10px 10px rgba(10, 10, 10, .1));
+  }
+  
+  .screen-glow {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: pink;
+    height: 105px;
+    width: 110px;
+  
+    animation: example 10s infinite;
+  }
+  #screen:hover {
+    background-image: url('https://media.giphy.com/media/FAqVgkrlLrPW4znFAj/giphy.gif');
+    background-position: center;
+    animation: 2s;
+  }
+  #screen:hover .screen-glow {
+    display: none
+  }
+  
+  @keyframes example {
+    0%   {background-color: #ffe3f3;}
+    25%  {background-color: lightpink;}
+    50%  {background-color: #b0ceff;}
+    75%  {background-color: white;}
+    100% {background-color: lightgrey;}
+  }
+  
+  #meshbag {
+    width: 1000px;
+    height: 350px;
+    background-image: radial-gradient(#fce6f6 40%, transparent 40%);
+    background-size: 20px 20px;
+    background-color: #ba0082;
+  }
+  
+  #breadboard:hover {
+    transform: rotate(30deg) skew(-10deg);
+    transition: 1s ease;
+  }
+  #coverdetails:hover {
+    transform: rotate(-30deg);
+    transition: 1s ease;
+    background: #ba0082;
+  }
+  #gradientbox:hover {
+    transform: rotate(-5deg);
+    transform-origin: center;
+    transition: 1s ease;
+  }
+  #triangle:hover {
+    transform: rotate(20deg);
+    transform-origin: center;
+    transition: 1s ease;
+  }
+  #triangle2:hover {
+    transform: rotate(-20deg);
+    transform-origin: center;
+    transition: 1s ease;
+  }
+  #backbox:hover {
+    transform: rotate(-5deg);
+    transform-origin: center;
+    transition: 1s ease;
+  }
+  #whiteboxshadow:hover {
+    transition: 1s ease;
+    background-color: pink;
+    background-position: center;
+  }
+  
+  #bottlewrapper:hover {
+    transition: 1s ease;
+    transform: rotate(-10deg);
+    transform-origin: bottom left;
+  }
+  
+  #breadboard:active {
+    background: blue;
+    transition: 0.1s instant;
+  }
