@@ -33,7 +33,13 @@ canvas {
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 0;
+  color: black;
 }
+
+.white-text {
+  color: #FFFFFF; /* White color */
+}
+
 
 .nav-button {
   cursor: pointer;
@@ -58,6 +64,7 @@ canvas {
 
 .bottom-navigation {
   position: fixed;
+  z-index: 10;
   bottom: 3vh;
   gap: 2vw;;
   left: 50%;
