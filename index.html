@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css">
     <link href="https://api.fontshare.com/v2/css?f[]=boska@200,201,300,301,400,401,500,501,700,701,900,901,1,2&display=swap" rel="stylesheet">
     <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@100,200,300,400,500,700,800,900&display=swap" rel="stylesheet">
@@ -20,72 +21,140 @@
             <span>S</span>
             <span>S</span>
         </div>
-        <div id="subtitle" class="cabinet">portfolio</div>
+        <div id="header" class="cabinet">portfolio</div>
+        <div id="subtitle" class="cabinet">A multidisciplinary designer
+            who discovered a love for creative coding.</div>
     </section>
 
     <section id="project-section">
         <div id="project-selector" class="cabinet">
             <div class="selector-container">
-                <div class="box cabinet" data-image="image1.jpg">1</div>
-                <div class="box cabinet" data-image="image1.jpg">2</div>
-                <div class="box cabinet" data-image="image1.jpg">3</div>
-                <div class="box cabinet" data-image="image1.jpg" >4</div>
-                <div class="box cabinet" data-image="image1.jpg">5</div>
-                <div class="box cabinet" data-image="image1.jpg">6</div>
-                <div class="box cabinet" data-image="image1.jpg">7</div>
-                <div class="box cabinet" data-image="image1.jpg">8</div>
-                <div class="box cabinet" data-image="image1.jpg">9</div>
+                <div class="box cabinet" data-image="images/s1a1.png" onclick="displayImage(this)" data-link="https://jessicachou1.github.io/s1a1/index.html">1</div>
+                <div class="box cabinet" data-image="images/s1a2.png" onclick="displayImage(this)" data-link="https://jessicachou1.github.io/s1a2/index.html">2</div>
+                <div class="box cabinet" data-image="images/s1a3.png" onclick="displayImage(this)" data-link="https://jessicachou1.github.io/s1fp/mess.html">3</div>
+                <div class="box cabinet" data-image="images/s1a3.png" onclick="displayImage(this)" data-link="https://jessicachou1.github.io/s3a3/index.html">4</div>
+                <div class="box cabinet" data-image="images/s2a2.png" onclick="displayImage(this)" data-link="https://jessicachou1.github.io/s2a2/">5</div>
+                <div class="box cabinet" data-image="images/s2a3.png" onclick="displayImage(this)" data-link="https://jessicachou1.github.io/s2a3/index.html">6</div>
+                <div class="box cabinet" data-image="images/s3a1.png" onclick="displayImage(this)" data-link="https://jessicachou1.github.io/s3a1/">7</div>
+                <div class="box cabinet" data-image="images/s3a2.png" onclick="displayImage(this)" data-link="https://jessicachou1.github.io/s3a2/home.html">8</div>
+                <div class="box cabinet" data-image="images/s3a3.png" onclick="displayImage(this)" data-link="https://jessicachou1.github.io/s3a3/index.html">9</div>
             </div>
         </div>
-        <div id="project-view" class="cabinet"></div>
+        <div id="project-view" class="cabinet">
+            <div id="emptytext" class="cabinet">click a number to view projects</div>
+        </div>
             <img id="arrow" src="images/arrow-up-right.png" alt="open link in new tab" style="cursor: pointer;">
             <div id="project-image">
-                <img id="main-image" src="placeholder.jpg" alt="main image">
         </div>  
     </div>
     </section>
 
     <section id="text-section" class="cabinet">
-        <div id="footertext" class="cabinet">
-            Art of the Web is an immersive exploration of interactive concepts in the digital design realm.
-        </div>
+        <div class="scroll-container">
+            <div class="scroll-content">
+              <div class="white-square"><img src="images/blueclock.gif" alt="Image 1"></div>
+              <div class="white-square"><img src="images/both.gif" alt="Image 2"></div>
+              <div class="white-square"><img src="images/greenclock.gif" alt="Image 3"></div>
+              <div class="white-square"><img src="images/squares2.gif" alt="Image 3"></div>
+              <div class="white-square"><img src="images/pinkclock.gif" alt="Image 3"></div>
+              <div class="white-square"><img src="images/circles2.gif" alt="Image 3"></div>
+              <div class="white-square"><img src="images/blueclock.gif" alt="Image 3"></div>
+              <div class="white-square"><img src="images/squares.gif" alt="Image 3"></div>
+              <div class="white-square"><img src="images/purpleclock.gif" alt="Image 3"></div>
+              <div class="white-square"><img src="images/circles.gif" alt="Image 3"></div>
+            
+            </div>
+          </div>
     </section>
 
     <section id="readings-section">
-        <div id="readings-view" class="cabinet">
-            <div id="readings-content" class="cabinet">
-                READING CONTENT
-            </div>
-        </div>
+        
         <div id="readings-selector" class="cabinet">
             <div class="readingsselector-container">
-                <div class="readingpill cabinet">1</div>
-                <div class="readingblob cabinet">2</div>
-                <div class="readingpill cabinet">3</div>
-                <div class="readingpill cabinet">4</div>
-                <div class="readingpill cabinet">5</div>
-                <div class="readingblob cabinet">6</div>
-                <div class="readingblob cabinet">7</div>
-                <div class="readingpill cabinet">8</div>
-                <div class="readingpill cabinet">9</div>
-                <div class="readingblob cabinet">10</div>
-                <div class="readingpill cabinet">11</div>
-                <div class="readingblob cabinet">12</div>
-                <div class="readingblob cabinet">13</div>
-                <div class="readingpill cabinet">14</div>
+                <div class="readingpill cabinet" data-content="<strong>Week 2 - Ulises Carrión - Mail Art and the Big Monster from Second Thoughts </strong><br>
+                Mail art seems to be anything that is created and sent to someone using the post, so that mail is an integral part of the work. I find it interesting how the author comments on whether mail art is pretentious or not and even says that he himself is very pretentious. He goes to great lengths to describe what mail art is and what it is not, and describes the only result that matters from mail art is more mail art (answers or responses to the mail art). 
+                <br><br>Discussion Questions:
+                <br>1. What exactly is the Big Monster that mail art is warring against? Is it up to each artists' own interpretation? 
+                <br>2. Would mail art be less valuable if it doesn't get a response or create an echo?
+                ">1</div>
+                <div class="readingblob cabinet" data-content="<strong>Week 3 - Laurel Schwulst & Édouard U - Selections from Creative Independent and Arena How Do You Use the Internet Mindfully</strong><br>
+                Laurel Schwulst draws upon many examples of metaphors to describe websites (a room, shelf, plant, garden, puddle, etc) and advocates for artists to create their own personal website as a contribution to the collective web. I found it interesting also that Édouard U engages in a type of [personal abstraction] in his everyday life that resembles the nodes and connections and hyperlinks on a website. He encourages readers to [surf] the web and create our own [knowledge networks], aka mental websites?
+                <br><br>Discussion Questions:
+                <br>1. Can a website be a metaphor for almost everything? Can it be anything?
+                <br>2. How can we practice [personal abstraction] deliberately?">2</div>
+                <div class="readingpill cabinet" data-content="<strong>Week 4 - Olia Lialina - Sill There Ruins and Templates of Geocities from Lost and Living (in) Archives</strong><br>
+                The quest to save Geocities and the subsequent analysis of its archive gives me a greater appreciation for web design history and its quick evolution from the somewhat tacky borders and themed neighborhoods of Geocities to what we have on the Internet now. It's fascinating to learn how tools and techniques changed over time such as the c.gif to create manual spacers and margins on webpages, or the language of [under construction] and [this page has moved.] I wonder what other standards and tools we have now as web designers that are traceable back to Geocities and its bygone era. 
+                <br><br>Discussion Questions:
+                <br>1. How are websites archived today? Does Google do it, or is it the Wayback Machine or something else? More importantly, how do they decide what to archive and what to leave out?
+                <br>2. Typically how long would a website be alive for to be considered [old] or [out of style]? 
+                <br>3. Have there been other cases of mass destruction for websites beyond Geocities?
+                ">3</div>
+                <div class="readingpill cabinet" data-content="<strong>Week 6 - Bojana Coklyat & Shannon Finnegan - Selections from Alt-Text as Poetry Workbook</strong><br>
+                Learning about the importance of alt text for web accessibility compels me to add alt text to images on my own websites. The way alt text is described in this workbook as poetry is super interesting, and I agree that there are many overlaps between poetry and alt text (eg. the need for brevity, careful use of language, some room for experimentation).  In some ways, writing alt text is like storytelling, and so much of a person's understanding can rely on it. 
+                <br><br>Discussion Questions:
+                <br>1. I wonder if we can leverage AI to help us produce alt text for images? A quick Google search brought up a lot of options, and it would be great if something like that was embedded into VS Code.
+                <br>2. I'm also curious to know if it's standard practice to write alt text for videos (eg. videos with no captions or words?) If so, what would that look like and how would it be written? Frame by frame, scene by scene, or more generally?
+                ">4</div>
+                <div class="readingpill cabinet" data-content="<strong>Week 8 - _A Personal Computer for Children of All Cultures_ from Decolonising the Digital</strong><br>
+                I found it fascinating that the author developed his own programming language in Arabic as a way to explore and protest the English-dominating programming languages we use today. Because English is the default language in international business, tourism, and technology, it is the closest we have to a universal language at this point, and its historical use in computer programming feeds into its dominance. Ramsey questions the implications of this and wonders about how we might cross cultural and linguistic boundaries in programming while maintaining existing libraries and patterns.
+                <br><br>Discussion Questions:
+                <br>1. Are Arabic and other non-English languages still often not rendered correctly? Do certain non-English characters still take up more memory?
+                <br>2. Is it because the first computers/ programming languages were developed in English-speaking countries that led to English's dominance in computer programming standards today?
+                ">5</div>
+                <div class="readingblob cabinet" data-content="<strong>Week 9 - Ben Duvall - Selections from New Modernism(s)</strong><br>
+                This week's reading is super theoretical and I felt a bit lost at times, but these are my takeaways. Duvall writes about artistic movements from modernism to postmodernism and now hypermodernism that influence how signs are used in graphic design. In hypermodernism, the Internet is the influencing surface that promotes a countersign system of the signs in the postmodern era, where designers pack complex and hyperlinked meaning into existing icons. This instantaneous understanding of meanings fits into our shortening attention spans, and Duvall talks about the Mickey icon as one that has been repurposed in numerous ways, as it symbolizes American hegemony and globalization. 
+                <br><br>Discussion Questions:
+                <br>1. If the Internet is a space for infinitely multiplying surfaces and the hyperlinking of meaning, how can designers ensure their intended hyperlinked meaning is coming across accurately for their audiences? How do cultural and contextual differences contribute to perhaps widely varied interpretations of hyper-modernist signs?
+                <br>2. What are other examples of postmodern/hypermodernism signs? Do icons common to user interfaces as we know it count (eg. the magnifying glass for the search bar, trash can icon for trash, download button as down arrow, chat bubbles for messaging)? Are other mega-brands also considered signs (eg. McDonald's golden arches or Nike's swoosh)?
+                ">6</div>
+                <div class="readingblob cabinet" data-content="<strong>Week 11 - Dot Tuer - Beyond the New Media Frame The Poetics of Absence in Vera Frenkel’s String Games</strong><br>
+                Frenkel's String Games is important because it included rules, emergence, interactivity, play, and the digital screen, all of which produced an ephemeral performance with indeterminate outcomes. Tuer talks about how it lacked recognition early on in the new media world but through comparison with other artworks, shows how it was the work that intersects memory, technology, and storytelling, challenging traditional notions of presence and absence in the digital realm.
+                <br><br>Discussion Questions
+                <br>1. How else can the digital screen be a repository of memory? Can most things posted on the web be considered [permanent] in some ways (eg. way back machine)? 
+                <br>2. Is Snapchat an example of an ephemeral digital performance? What are other examples?
+                ">7</div>
+                <div class="readingpill cabinet" data-content="<strong>Week 12 - Paul Soulellis - Performing the Feed</strong><br>
+                I found this week's reading to be very thought-provoking, especially because I am taking another class about platform governance and found many topic parallels. Paul Soulellis describes the act of posting as making public, and traditionally, messages in public are always a kind of interruption that asks for attention. Yet, with the modern feed, its endless flow produces more noise than signals, pulling us into a constant state of new boredom semi-awareness, where all of it blends together in a new texture. He talks about how we develop trust issues since voices could be disguised, unrecognizable, or even non human, and the potential dangers this poses-- writing, [I see a not too distant future where these dream scenes evolve into total believability, fictional futures that are indistinguishable from live events, detached from their origin, livestreams spun out of thin air.] Since this piece was written in 2017, that future that Soulellis talks about is already here (think: deepfakes, generative AI so easily accessible to almost every one).
+                <br><br>Discussion Questions:
+                <br>1. The Digital Services Act in Europe has pushed platforms to adopt non-personalized content feeds which would drastically change how we consume content. But, even if feeds were non-personalized, are they still the same endless flowing state of new boredom that Soulellis describes? Or do they produce more noise, less appeal? Less noise, more appeal? Maybe just a greater jumble of stuff?
+                <br>2. Soulellis calls on artists, archivists and activists to breach, break and leak feeds to resist the feed's smooth flow. I wonder what he would consider to be breaches, breaks or leaks. Would the black square during BLM's blackouttuesday count? What are other examples?
+                ">8</div>
+                <div class="readingpill cabinet" data-content="<strong>Week 13 - Neta Bomani & Sabii Borno - Beyond Dark Matter from Logic Issue 15 Beacons</strong><br>
+                The story about Gem and her journey into her computer and into the Way software was one that showed how software can be used as a method of control- control over how history is written, how society behaves, and how community is built. It was really interesting to see how Gem navigates the complicated truth that technology is built on the master slave relationship, and how she comes to reject the idea that [that's just the way it is,] and instead to questioning the status quo, and finally recognizing that there are other possibilities for how history is written and how she can be part of it.   
+                I really like this part in the story that discusses the tech gap, [The computer is always trying to relate to human history because people modeled computers after their world. Most importantly, this history is something that you feel every time you use your computer. Computers deeply influence how we understand ourselves and society. They’re instruments of power that can create empowered people like you, who generally know their way around a computer, just as they can create disempowered people, who feel like they don’t know how computers work at all.
+                <br><br>Discussion Questions:
+                <br>1. What are biases that are reinforced and amplified through technology? Especially with AI algorithms that are built upon biased datasets, how can we reconcile the potential harms that come from such powerful technology?
+                <br>2. Are parts of the computer system today still related to the master-slave relationship? Do we have new terms to discuss these systems?
+                ">9</div>
+                <div class="readingblob cabinet" data-content="<strong>Week 14 - Boris Groys - Art on the Internet</strong><br>
+                Groys speaks about art on the Internet as something completely different from traditional offline art. He talks about how art online is broadcasted from global to local, how it no longer has a fixed, institutional framing, and how art production and art exposure are resynchronized. This reminded me of how many artists I follow online like to use short videos (often sped up) to show their drawing/painting process, which is a type of engaging content and art documentation beyond the art itself. Groys discussion of surveillance also made me think of content creators more generally, who often feel the need to produce constantly, and in that process of surveillance, the temporary absence necessary to the creative process is stripped. I found some other parts of his argument to be hard to follow, but generally agree that the affordances of the Internet creates the art archive's utopian potential (with broader production and distribution), even though the artists' search for true self through artistic expression has failed with museums and an ever surveilling internet. 
+                <br><br>Discussion Questions:
+                <br>1. When Groys talks about how art and politics differ because of the anticipated future presence of art, I wonder whether ephemeral art would be considered slightly different or perhaps a subcategory of what he writes about because only its documentation lives. And in a similar vein, how is the online documentation of art that exists in real life valued compared to the physical art itself?
+                <br>2. I also wonder what Groys would think about NFTs, and how that kind of artwork adds another dimension complicating how the Internet has transformed (what we consider) art?
+                ">10</div>
+            </div>
+        </div>
+        <div id="readings-view" class="cabinet">
+            <div id="readings-content" class="cabinet">
+                <div id="empty" class="cabinet">click a number to reading responses</div>
             </div>
         </div>
     </section>
 
     <section id="footer-section">
-        <div id="footertext" class="cabinet">
-            jessica chou © 2024
+        <div id="footerbigtext" class="cabinet">
+            THANKS
+            <div id="footertext" class="cabinet">
+                jessica chou © 2024
+            </div>
         </div>
-        <div id="footertext" class="cabinet">
-            <a href="https://www.linkedin.com/in/jessicaychou/" class="cabinet"> linkedin </a> <br>
-            <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=jesschou@seas.upenn.edu" class="cabinet"> contact </a> <br>
-            <a href="https://www.jessicachou.me/" class="cabinet"> other portfolio </a> <br>
-        </div>
+                    <div id="footertext" class="cabinet">
+                <div id="button1"><a href="https://www.linkedin.com/in/jessicaychou/" class="cabinet button"> linkedin </a> <br></div>
+                <div id="button2"><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=jesschou@seas.upenn.edu" class="cabinet button"> email </a> <br></div>
+                <div id="button3"><a href="https://www.jessicachou.me/" class="cabinet button"> other portfolio </a> <br></div>
+            </div>
+       
+        
     </section>
-
+    <script src="script.js"></script>
 </body>

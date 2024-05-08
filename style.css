@@ -1,7 +1,7 @@
 /* portfolio style sheet */
 
 body {
-  background-color: white;
+  background-color: aliceblue;
   padding: 0;
   height: 100%;
   margin: 0;
@@ -9,7 +9,7 @@ body {
 }
 
 ::selection {
-    background-color: lightgray;
+    background-color: blue;
   }
 
 /* link styles */
@@ -54,6 +54,7 @@ a:visited {
   display: flex;
   align-items: center;
   position: relative;
+  background-color: aliceblue;
 }
 
 #title {
@@ -66,9 +67,15 @@ a:visited {
   font-size: 40vw;
   font-weight: 1000;
   margin-top: 10vh;
+  line-height: 23.5vw;
 }
 
-#subtitle {
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 1s ease;
+}
+
+#header {
   left: 50%;
   transform: translateX(-50%);
   top: 20px;
@@ -79,26 +86,59 @@ a:visited {
   z-index: 10;
 }
 
+#subtitle {
+  right: 50px;
+  bottom: 3vw;
+  width: 30vw;
+  position: absolute;
+  font-size: 25px;
+  font-weight: 400;
+  text-align: right;
+}
+
 #title span:hover {
   display: inline-block;
-  transition: transform .6s ease-in-out;
+  transition: transform .25s ease-in-out;
   vertical-align: bottom;
   transform: scaleY(.5);
   transform-origin: bottom;
 }
 
+#title span:not(:hover) {
+  transform: scaleY(1);
+  transition: transform .25s ease-in-out;
+  transform-origin: bottom;
+}
+
+@media screen and (max-width: 768px) {
+  #subtitle {
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    width: 60vw;
+  }
+  #header-section {
+    height: 80vw;
+  }
+  #title {
+    margin-top:-10px;
+  }
+  }
+
 /* project section here  */
 
 #project-section {
-  background-color: white;
+  background-color: aliceblue;
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
-  z-index: 0;
-
-
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 #project-selector {
@@ -123,7 +163,7 @@ a:visited {
 }
 
 .box {
-  background-color: #ccc;
+  background-color: aliceblue;
   width: 10vw;
   height: 10vw;
   display: flex;
@@ -144,7 +184,7 @@ a:visited {
 } */
 
 #project-view {
-  background-color: grey;
+  background-color: lightgray;
   width: 50vw;
   height: 100vh;
   display: flex;
@@ -157,19 +197,14 @@ a:visited {
 }
 
 #project-image {
-  width: 38vw;
+  width: 45vw;
   height: 38vw;
-  background-color: white;
+  background-color: transparent;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(10%, -50%);
+  transform: translate(5%, -35%);
   z-index: 2;
-}
-
-#main-image {
-  max-width: 100%;
-  max-height: 300px;
 }
 
 #arrow {
@@ -182,60 +217,117 @@ a:visited {
 }
 
 #arrow:hover {
-  background-color: lightgray;
+  background-color: white;
 }
 
+#emptytext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 20px;
+}
+
+
 @media screen and (max-width: 768px) {
-  #project-selector {
+  #project-section {
     display: block;
+    height: auto;
+    min-height: 100vh;
+  }
+  #project-selector {
     width: 100vw;
     height: auto;
-    position: absolute;
-    top: 0; 
-    left: 0; 
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom-left-radius: 0vw;
+    border-top-right-radius: 5vw;
   }
   .selector-container {
     display:flex;
+    flex-wrap: wrap;
+    grid-gap: 3vw;
   }
   .selector-container .box {
-    width: 10vw;
-    height: 8vw;
+    width: 12vw;
+    height: 12vw;
   }
   #arrow {
-    top: 30vw;
+    top: 60vw;
     right: 7vw;
+    scale: 2;
   }
+  
   #project-image {
-    width: 80vw;
+    width: 90vw;
     height: 80vw;
     position: absolute;
-    top: 60%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
-  }
-  #main-image {
-    max-width: 100%;
-  }
+    }
+
   #project-view {
     display: block;
     width: 100vw;
-    height: auto; 
     position: relative;
-    left: 0;
+    background-color: lightgray;
+    border-bottom-left-radius: 0vw;
+    border-top-right-radius: 0vw;
   }
+  #emptytext {
+    top: 50vw;
+  }
+  
 }
 
 
 /* text section here  */
 #text-section {
-  background-color: lightgrey;
+  background-color: aliceblue;
   width: 100vw;
-  height: 100vh;
+  height: 50vh;
   display: flex;
   align-items: center;
+  overflow-y: hidden;
+  overflow-x: auto;
   position: relative;
 }
+
+.scroll-container {
+  width: 100vw;
+  height: 50vh;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vw;
+}
+
+.scroll-content {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left:0;
+  margin-top: 0px;
+}
+
+.white-square {
+  width: 25vw;
+  height: 25vw;
+  background-color: white;
+  margin-right: 5vw;
+}
+
+.white-square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 /* readings section here  */
 #readings-section {
@@ -245,6 +337,7 @@ a:visited {
   display: flex;
   align-items: center;
   position: relative;
+  overflow-x: hidden;
 }
 
 #readings-selector {
@@ -255,7 +348,7 @@ a:visited {
   align-items: center;
   position: relative;
   z-index: 1;
-  border-bottom-right-radius: 5vw;
+  border-bottom-left-radius: 5vw;
   overflow-y: hidden;
 }
 
@@ -269,7 +362,7 @@ a:visited {
 }
 
 .readingpill {
-  background-color: #ccc;
+  background-color: aliceblue;
   width: 7vw;
   height: 10vw;
   border-radius: 20vw;
@@ -282,7 +375,7 @@ a:visited {
 }
 
 .readingblob {
-    background-color: #ccc;
+    background-color: aliceblue;
     width: 10vw;
     height: 10vw;
     border-radius: 20vw;
@@ -310,47 +403,73 @@ a:visited {
   align-items: center;
   position: relative;
   z-index: 1;
-  border-bottom-left-radius: 5vw;
+  border-bottom-right-radius: 5vw;
   overflow-y: hidden;
 }
 
 #readings-content{
   z-index: 3;
-  width: 38vw;
-  height: 38vw;
-  background-color: lightgrey;
+  width: 36vw;
+  height: 36vw;
+  background-color: aliceblue;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  padding: 2vw;
+  font-size: 1.4vw;
+  overflow: auto;
+  word-wrap: break-word;
+  white-space: normal;
+}
+#empty {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 20px;
+  height: 100%;
+  justify-content: center;
 }
 
 
+
 @media screen and (max-width: 768px) {
+  #readings-section {
+    display: block;
+    height: auto;
+    min-height: 100vh;
+  }
   #readings-selector {
+    position: relative;
     display: block;
     width: 100vw;
     height: auto;
-    position: absolute;
-    top: 0; 
-    left: 0; 
+    border-bottom-left-radius: 0vw;
   }
   .readingsselector-container {
     display:flex;
     flex-wrap: wrap;
   }
   .readingsselector-container .readingpill,  .readings-container .readingpill .readingblob {
-    width: calc(14.28% - 1vw);
+    width: calc(20% - 1vw);
     height: 7vw;
   }
   #readings-view {
     display: block;
     width: 100vw;
-    height: 100vh; 
     position: relative;
-    left: 0;
     background-color: white;
+    border-bottom-left-radius: 5vw;
+  }
+  #readings-content {
+    width: 80vw;
+    height: 80vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.05vw;
   }
 }
 
@@ -359,8 +478,8 @@ a:visited {
 #footer-section {
   background-color: lightgrey;
   width: 100vw;
-  height: 50vh;
-  display: flex;
+  height: 80vh;
+  display: inline-flex;
   align-items: center;
   position: relative;
 }
@@ -370,10 +489,78 @@ a:visited {
   align-items: center;
   text-align: left;
   justify-content: center;
-  position: relative;
-  font-size: 3vw;;
+  position: absolute;
+  font-size: 25px;;
   font-weight: 700;
-  padding: 3vw;
+  gap: 5vw;
+  display: flex;
 }
 
+#footerbigtext {
+  width: 100vw;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  font-size: 20vw;;
+  font-weight: 1000;
+}
 
+#footerbigtext span:hover {
+  display: inline-block;
+  transition: transform .25s ease-in-out;
+  vertical-align: bottom;
+  transform: scaleY(.5);
+  transform-origin: bottom;
+}
+
+#footerbigtext span:not(:hover) {
+  transform: scaleY(1);
+  transition: transform .25s ease-in-out;
+  transform-origin: bottom;
+}
+
+.button {
+  display: inline-block;
+  padding:  1vw;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  border: none;
+  border-radius: 0vw; 
+  font-size: 2vw; 
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 700;
+  gap: 5vw;
+  display: flex;
+}
+
+.button:hover {
+  background-color: grey; 
+  text-decoration: none;
+}
+#button1{
+  position:absolute;
+  top: -10vw;
+  left: 30vw;
+}
+#button2{
+  position:absolute;
+  top: 3vw;
+  left: 45vw;
+}
+#button3{
+  position:absolute;
+  top: 0vw;
+  left: 60vw;
+}
+
+@media screen and (max-width: 768px) {
+  #footer-section {
+    max-height: 50vh;
+  }
+  .button { 
+    font-size: 4vw; 
+  }
+}
